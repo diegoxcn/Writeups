@@ -254,6 +254,7 @@ Connection closed by foreign host.
 ```
 
 - Google the info get one software named portspoof
+
 ![Pasted image 20210422124449.png](Pasted%20image%2020210422124449.png)
 ![Pasted image 20210422124655.png](Pasted%20image%2020210422124655.png)
 - This is exactly the one cause our problem.
