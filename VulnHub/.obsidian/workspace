@@ -1,0 +1,78 @@
+{
+  "main": {
+    "id": "689c8b754da4b0b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "37bdecb0a217885b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Breach1/all.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7779692fa6d7ca0",
+    "type": "split",
+    "children": [
+      {
+        "id": "79a764b9a94e03fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72e638d19301bc37",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "16160dd0a9f225f2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f224268d45ba990",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "37bdecb0a217885b",
+  "lastOpenFiles": [
+    "Breach1/all.md",
+    "Breach1/30 - Privesc.md",
+    "Breach1/25 - HTTPS_M@nag3Me.md",
+    "Breach1/20 - ImpressCMS.md",
+    "Breach1/16 - Port Spoof.md",
+    "Breach1/15 - Web Service.md",
+    "Breach1/05 - Useful Info.md",
+    "Breach1/10 - Port scan & Enumeration.md",
+    "Pasted image 20210423122003.png",
+    "Pasted image 20210423112937.png"
+  ]
+}
