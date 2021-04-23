@@ -2,13 +2,19 @@
 ## Possible Credentials
 
 bill.png : `coffeestains`
+
 `pgibbons : damnitfeel$goodtobeagang$ta`
 
 `Michael Bolton`
+
 `192.168.110.140/.keystore`
+
 `Peter`
+
 `Bill`
+
 `http://192.168.110.140/impresscms/\_SSL\_test\_phase1.pcap`
+
 `tomcat : Tt\5D8F(#!*u=G)4m7zB`
 
 - /etc/passwd
