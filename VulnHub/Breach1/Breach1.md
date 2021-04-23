@@ -122,7 +122,7 @@ nikto -host 192.168.110.140                                                     
 
 # Web Service
 ## Images
-![Pasted image 20210422114134.png](https://github.com/diegoxcn/Writeups/raw/main/VulnHub/Breach1/Pasted%20image%2020210422114134.png)
+![Pasted image 20210422114134.png](Pasted%20image%2020210422114134.png)
 - There's extra comment from bill.png, says coffeestains, so far no idea what does it mean.
 ```bash
 ┌──(htb㉿kali)-[~/VulnHub/Breach1]
