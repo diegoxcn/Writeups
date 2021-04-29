@@ -598,6 +598,26 @@ sudo: 1 incorrect password attempt
 - Of course I have the whole password from google already, just wonder how I can get it.
 - Decompyle the code, but my system only have pip for python3.9, but uncompyle6 need 2.6 to 3.8
 - Install pip for python2.7, and only extension pyc is working for uncompyle6.....
+- This command is working on MacOS but disabled on Debian/Ubuntu/Kali.....
+
+*Kali*
+```bash
+┌──(htb㉿kali)-[~]
+└─$ sudo python2.7 -m ensurepip --default-pip
+[sudo] password for htb:
+ensurepip is disabled in Debian/Ubuntu for the system python.
+
+Python modules For the system python are usually handled by dpkg and apt-get.
+
+    apt-get install python-<module name>
+
+Install the python-pip package to use pip itself.  Using pip together
+with the system python might have unexpected results for any system installed
+module, so use it on your own risk, or make sure to only use it in virtual
+environments.
+```
+
+*MacOS*
 ```bash
 └╼cn$ sudo python2.7 -m ensurepip --default-pip                                                  1 ⨯
 Password:
