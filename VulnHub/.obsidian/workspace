@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "37bdecb0a217885b",
+        "id": "459c61f48a577e7b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Breach1/all.md",
-            "mode": "source"
+            "file": "Breach-2_final2.1/Breach-2_final2.1.md",
+            "mode": "preview"
           }
         }
       }
@@ -57,22 +57,46 @@
   "right": {
     "id": "4f224268d45ba990",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "e28b286657b17a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9eaba8aac2b6735",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Breach-2_final2.1/Breach-2_final2.1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "37bdecb0a217885b",
+  "active": "459c61f48a577e7b",
   "lastOpenFiles": [
-    "Breach1/all.md",
-    "Breach1/30 - Privesc.md",
-    "Breach1/25 - HTTPS_M@nag3Me.md",
-    "Breach1/20 - ImpressCMS.md",
-    "Breach1/16 - Port Spoof.md",
-    "Breach1/15 - Web Service.md",
-    "Breach1/05 - Useful Info.md",
-    "Breach1/10 - Port scan & Enumeration.md",
-    "Pasted image 20210423122003.png",
-    "Pasted image 20210423112937.png"
+    "Breach-2_final2.1/Breach-2_final2.1.md",
+    "Breach-2_final2.1/25 - Privesc.md",
+    "Breach-2_final2.1/15 - mysql injection.md",
+    "Breach-2_final2.1/10 - Web Service.md",
+    "Breach-2_final2.1/05 - Ports Scan & Enumeration.md",
+    "Breach-2_final2.1/Untitled.md",
+    "Breach-2_final2.1/20 - XSS.md",
+    "Untitled.md",
+    "Breach1/Breach1.md",
+    "Pasted image 20210422114134.png.md"
   ]
 }
