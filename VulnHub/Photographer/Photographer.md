@@ -171,8 +171,8 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 
 - gobuster failed to run on koken port 8000, all satus code is 301.
 - Wapplyzer and source code of index page tell that koken version is 0.22.24
-![[Pasted image 20210509152834.png]]
-![[Pasted image 20210509152906.png]]
+![](Pasted%20image%2020210509152834.png)
+![](Pasted%20image%2020210509152906.png)
 - So got from searchsploit that we do have an file upload exploit of this koken version
 ```bash
 └╼cn$ searchsploit koken
@@ -185,7 +185,7 @@ Shellcodes: No Results
 ````
 https://www.exploit-db.com/exploits/48706
 - And check the Author of it:
-![[Pasted image 20210509153743.png]]
+![](Pasted%20image%2020210509153743.png)
 - He is the author of this box as well. So this must be it, it's just, we might have to login first?
 	-	This might be samba share coming in?
 
@@ -272,18 +272,18 @@ Don't forget your secret, my babygirl ;)
 - hostname: `photographer.com`
 - is the secret `mybabygirl` or `babygirl` of user daisa `daisa@photographer.com`?
 - OK it's `babygirl`, and we are in.
-![[Pasted image 20210509155758.png]]
+![](Pasted%20image%2020210509155758.png)
 - Now it's time to upload file.
 
 ## Koken
 - upload file exploit
-![[Pasted image 20210509162112.png]]
+![](Pasted%20image%2020210509162112.png)
 - remove the jpg extension by burp, so it can bypass the name check.
-![[Pasted image 20210509163747.png]]
+![](Pasted%20image%2020210509163747.png)
 - Then we will have the access link
-![[Pasted image 20210509163904.png]]
+![](Pasted%20image%2020210509163904.png)
 - Here we go, we now have RCE:
-![[Pasted image 20210509163950.png]]
+![](Pasted%20image%2020210509163950.png)
 
 # Privesc
 ## Reconn
@@ -392,7 +392,7 @@ uid=1001(agi) gid=1001(agi) groups=1001(agi)
 - reviewed peas again, seems like the php7.2 is the only one not normal.
 - but I would still need a sudo user.
 - Or not.........
-![[Pasted image 20210509175725.png]]
+![](Pasted%20image%2020210509175725.png)
 ```bash
 www-data@photographer:/dev/shm$ /usr/bin/php7.2 -r "pcntl_exec('/bin/sh', ['-p']);"
 # id

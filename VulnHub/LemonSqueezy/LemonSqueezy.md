@@ -275,34 +275,36 @@ Interesting Finding(s):
 ## Wordpress
 - user: orange
 - password: ginger
-![[Pasted image 20210507114648.png]]
+![](Pasted%20image%2020210507114648.png)
 - Login successfully, need to check around.
-![[Pasted image 20210507114724.png]]
+![](Pasted%20image%2020210507114724.png)
 - Here's one keep safe post draft
-![[Pasted image 20210507114810.png]]
+![](Pasted%20image%2020210507114810.png)
 - This looks like some credential: `n0t1n@w0rdl1st!`, hmmmm, "not in a wordlist"? Sooooo, in other wordlist? Not just one? Tried this credential with different username on phpmyadmin, work on user orange.
 - Got extra hostname from mailbox: `orange@squeezy.org.au`, also put in /etc/hosts
-![[Pasted image 20210507114957.png]]
+![](Pasted%20image%2020210507114957.png)
 
 ## phpmyadmin
 - user: orange
 - password: n0t1n@w0rdl1st!
-![[Pasted image 20210507131142.png]]
+![](Pasted%20image%2020210507131142.png)
 - Wordpress user lemon
-![[Pasted image 20210507131234.png]]
+![](Pasted%20image%2020210507131234.png)
 - hmmmmm, we can try to crack it, but, on second thoughts, since we have control of the db already, why not just create a new account, it's more easy, no?
 - Even more easier idea, let's make user orange become admin user, hahaha
-![[Pasted image 20210507131554.png]]
-![[Pasted image 20210507133056.png]]
+![](Pasted%20image%2020210507131554.png)
+![](Pasted%20image%2020210507133056.png)
 - And now we have it. :D
-![[Pasted image 20210507133147.png]]
+![](Pasted%20image%2020210507133147.png)
 
 ## Reverse Shell
 - Tried everything I can on wordpress, but hmm, all theme files, plugins files are readonly, file upload is disabled by removing temp folder.
 - So there's only way of dropping file, is by phpmyadmin.
-![[Pasted image 20210507180436.png]]
-![[Pasted image 20210507180526.png]]
-![[Pasted image 20210507180730.png]]# Privesc
+![](Pasted%20image%2020210507180436.png)
+![](Pasted%20image%2020210507180526.png)
+![](Pasted%20image%2020210507180730.png)
+
+# Privesc
 ## Reconn
 - */2 *   * * *   root    /etc/logrotate.d/logrotate
 - 

