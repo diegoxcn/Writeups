@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "W34KN3SS/W34KN3SS.md",
+            "file": "GlasgowSmile/GlasgowSmile.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "W34KN3SS/W34KN3SS.md",
+                "file": "GlasgowSmile/GlasgowSmile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "459c61f48a577e7b",
   "lastOpenFiles": [
+    "GlasgowSmile/05 - Ports Scan & Enumeration.md",
+    "GlasgowSmile/Untitled.md",
     "W34KN3SS/W34KN3SS.md",
     "Photographer/Photographer.md",
     "LemonSqueezy/LemonSqueezy.md",
@@ -95,8 +97,6 @@
     "GoldenEye/GoldenEye.md",
     "Breach1/Breach1.md",
     "Bravery/Bravery.md",
-    "Breach-2_final2.1/Breach-2_final2.1.md",
-    "Breach-2_final2.1/Pasted image 20210426185912.png",
-    "Healthcare/10 - OpenEMR.md"
+    "Breach-2_final2.1/Breach-2_final2.1.md"
   ]
 }

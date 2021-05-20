@@ -169,7 +169,7 @@ Nmap done: 1 IP address (1 host up) scanned in 34.24 seconds
 
 
 ## SplashAdmin
-- From [05 - Ports Scan & Enumeration](05%20-%20Ports%20Scan%20&%20Enumeration.md) we know from nikto there's a page called `/splashAdmin.php`, but we didn't explore it yet.
+- From [../GlasgowSmile/GlasgowSmile](../GlasgowSmile/GlasgowSmile.md) we know from nikto there's a page called `/splashAdmin.php`, but we didn't explore it yet.
 ![](Pasted%20image%2020210503103751.png)
 ```bash
 └╼cn$ curl -s http://192.168.20.7/splashAdmin.php | html2text

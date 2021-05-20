@@ -233,7 +233,7 @@ Read data files from: /usr/bin/../share/nmap
 Nmap done: 1 IP address (1 host up) scanned in 9.08 seconds
 ```
 -WOW, this is very interesting. # Web Service
-- [[05 - Ports Scan & Enumeration]] got port 80 opened
+- [[../GlasgowSmile/GlasgowSmile]] got port 80 opened
 
 ## nikto
 - /images

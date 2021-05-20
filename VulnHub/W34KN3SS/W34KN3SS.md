@@ -158,7 +158,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 - Looks like that port 80 and 443 are serve very same web site. We will explore more by web browser.
 
 # Web Service
-[05 - Ports Scan & Enumeration](05%20-%20Ports%20Scan%20&%20Enumeration.md)
+[../GlasgowSmile/GlasgowSmile](../GlasgowSmile/GlasgowSmile.md)
 - /uploads folder is empty, but we should have at least rw permission on it.
 - /upload.php is file upload function.
 - /test:    it's all about keys
