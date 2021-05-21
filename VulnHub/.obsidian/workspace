@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "GlasgowSmile/GlasgowSmile.md",
+            "file": "InfoSecPrep_OSCP/InfoSecPrepOSCP.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GlasgowSmile/GlasgowSmile.md",
+                "file": "InfoSecPrep_OSCP/InfoSecPrepOSCP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "459c61f48a577e7b",
   "lastOpenFiles": [
+    "InfoSecPrep_OSCP/Untitled.md",
+    "InfoSec Prep: OSCP/Untitled.md",
+    "Untitled.md",
+    "GlasgowSmile/GlasgowSmile.md",
     "GlasgowSmile/05 - Ports Scan & Enumeration.md",
     "GlasgowSmile/Untitled.md",
     "W34KN3SS/W34KN3SS.md",
     "Photographer/Photographer.md",
     "LemonSqueezy/LemonSqueezy.md",
-    "Healthcare/Healthcare.md",
-    "GoldenEye/GoldenEye.md",
-    "Breach1/Breach1.md",
-    "Bravery/Bravery.md",
-    "Breach-2_final2.1/Breach-2_final2.1.md"
+    "Healthcare/Healthcare.md"
   ]
 }
